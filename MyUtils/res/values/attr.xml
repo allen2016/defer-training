@@ -1,0 +1,142 @@
+<resources>
+	
+    <!-- ********************************************   MyTitleView ************************************************** -->
+    <!-- 注意这里是控件的名字 -->
+    <declare-styleable name="MyTitleView">
+ 
+        <!-- 这里是控件的属性和属性的格式 -->
+        <attr name="titleText" format="reference|string" />
+        <attr name="titleTextSize" format="dimension" />
+        <attr name="titleTextColor" format="reference|color" />
+        
+        <attr name="leftIcon" format="reference|integer" />
+        <attr name="leftIconVisible">
+            <!-- Visible on screen. -->
+            <enum name="visible" value="0" />  
+			<!-- Not displayed, but taken into account during layout (space is left for it). -->  
+			<enum name="invisible" value="1" />  
+			<!-- Completely hidden, as if the view had not been added. -->  
+			<enum name="gone" value="2" />
+        </attr>
+        <attr name="leftIconOnClick" format="string" />
+        
+        <attr name="rightIcon" format="reference|integer" />
+        <attr name="rightIconVisible">
+            <!-- Visible on screen. -->
+            <enum name="visible" value="0" />  
+			<!-- Not displayed, but taken into account during layout (space is left for it). -->  
+			<enum name="invisible" value="1" />  
+			<!-- Completely hidden, as if the view had not been added. -->  
+			<enum name="gone" value="2" />
+        </attr>
+        <attr name="rightIconOnClick" format="string" />
+        
+        <attr name="leftText" format="reference|string" />
+        <attr name="leftTextColor" format="reference|color" />
+        <attr name="leftTextSize" format="dimension" />
+        <attr name="leftTextVisible">
+<!--             Visible on screen. -->
+            <enum name="visible" value="0" />  
+<!-- 			Not displayed, but taken into account during layout (space is left for it).   -->
+			<enum name="invisible" value="1" />  
+<!-- 			Completely hidden, as if the view had not been added.   -->
+			<enum name="gone" value="2" />
+        </attr>
+        <attr name="leftTextOnClick" format="string" />
+        
+        <attr name="rightText" format="reference|string" />
+        <attr name="rightTextColor" format="reference|color" />
+        <attr name="rightTextSize" format="dimension" />
+        <attr name="rightTextVisible">
+<!--             Visible on screen. -->
+            <enum name="visible" value="0" />  
+<!-- 			Not displayed, but taken into account during layout (space is left for it).   -->
+			<enum name="invisible" value="1" />  
+<!-- 			Completely hidden, as if the view had not been added.   -->
+			<enum name="gone" value="2" />
+        </attr>
+        <attr name="rightTextOnClick" format="string" />
+       
+    </declare-styleable>
+    
+    <!-- ********************************************   SlidingMenu ************************************************** -->
+    <declare-styleable name="SlidingMenu">
+        <attr name="mode">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+        <attr name="viewAbove" format="reference" />
+        <attr name="viewBehind" format="reference" />
+        <attr name="behindOffset" format="dimension" />
+        <attr name="behindWidth" format="dimension" />
+        <attr name="behindScrollScale" format="float" />
+        <attr name="touchModeAbove">
+            <enum name="margin" value="0" />
+            <enum name="fullscreen" value="1" />
+            <enum name="none" value="2" />
+        </attr>
+        <attr name="touchModeBehind">
+            <enum name="margin" value="0" />
+            <enum name="fullscreen" value="1" />
+            <enum name="none" value="2" />
+        </attr>
+        <attr name="shadowDrawable" format="reference" />
+        <attr name="shadowWidth" format="dimension" />
+        <attr name="fadeEnabled" format="boolean" />
+        <attr name="fadeDegree" format="float" />
+        <attr name="selectorEnabled" format="boolean" />
+        <attr name="selectorDrawable" format="reference" />
+    </declare-styleable>
+    
+    <!-- ********************************************   ViewPagerIndicator ************************************************** -->
+    <declare-styleable name="ViewPagerIndicator">
+        <!-- Style of the circle indicator. -->
+        <attr name="vpiCirclePageIndicatorStyle" format="reference"/>
+        <!-- Style of the line indicator. -->
+        <attr name="vpiLinePageIndicatorStyle" format="reference"/>
+    </declare-styleable>
+
+    <attr name="centered" format="boolean" />
+    <attr name="selectedColor" format="color" />
+    <attr name="strokeWidth" format="dimension" />
+    <attr name="unselectedColor" format="color" />
+
+    <declare-styleable name="CirclePageIndicator">
+        <!-- Whether or not the indicators should be centered. -->
+        <attr name="centered" />
+        <!-- Color of the filled circle that represents the current page. -->
+        <attr name="fillColor" format="color" />
+        <!-- Color of the filled circles that represents pages. -->
+        <attr name="pageColor" format="color" />
+        <!-- Orientation of the indicator. -->
+        <attr name="android:orientation"/>
+        <!-- Radius of the circles. This is also the spacing between circles. -->
+        <attr name="radius" format="dimension" />
+        <!-- Whether or not the selected indicator snaps to the circles. -->
+        <attr name="snap" format="boolean" />
+        <!-- Color of the open circles. -->
+        <attr name="strokeColor" format="color" />
+        <!-- Width of the stroke used to draw the circles. -->
+        <attr name="strokeWidth" />
+        <!-- View background -->
+        <attr name="android:background"/>
+    </declare-styleable>
+
+    <declare-styleable name="LinePageIndicator">
+        <!-- Whether or not the indicators should be centered. -->
+        <attr name="centered" />
+        <!-- Color of the unselected lines that represent the pages. -->
+        <attr name="unselectedColor" />
+        <!-- Color of the selected line that represents the current page. -->
+        <attr name="selectedColor" />
+        <!-- Width of each indicator line. -->
+        <attr name="lineWidth" format="dimension" />
+        <!-- Width of each indicator line's stroke. -->
+        <attr name="strokeWidth" />
+        <!-- Width of the gap between each indicator line. -->
+        <attr name="gapWidth" format="dimension" />
+        <!-- View background -->
+        <attr name="android:background"/>
+    </declare-styleable>
+
+</resources>
