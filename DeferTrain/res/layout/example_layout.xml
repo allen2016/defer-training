@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="50dp" >
-    
-	
-    
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:uview="http://schemas.android.com/apk/res/com.mycustom.cao"
+     android:layout_width="match_parent"  
+     android:layout_height="match_parent">
+     
+     <com.mycustom.view.TitleView
+         android:layout_width="match_parent"  
+         android:layout_height="50dp"
+         android:id="@+id/mytitleview"  />
+     
 </LinearLayout>
+

@@ -2,9 +2,11 @@
 	
     <!-- ********************************************   MyTitleView ************************************************** -->
     <!-- 注意这里是控件的名字 -->
-    <declare-styleable name="MyTitleView">
+    <declare-styleable name="TitleView">
  
-        <!-- 这里是控件的属性和属性的格式 -->
+        <!-- 这里是控件的属性和属性的格式 -->	
+        <attr name="viewBg" format="reference|color"/>
+        
         <attr name="titleText" format="reference|string" />
         <attr name="titleTextSize" format="dimension" />
         <attr name="titleTextColor" format="reference|color" />
