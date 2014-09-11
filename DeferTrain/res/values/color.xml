@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	
+	<color name="index_color1">#0097d0</color>
+	<color name="index_color2">#ff9393</color>
+	
+	<color name="home_title">#01BABC</color>
+	<color name="home_btn1">#01BABd</color>
+	<color name="home_btn2">#0097D0</color>
+
+</resources>
+
+

@@ -5,7 +5,7 @@
     <declare-styleable name="TitleView">
  
         <!-- 这里是控件的属性和属性的格式 -->	
-        <attr name="viewBg" format="reference|color"/>
+        <attr name="viewBgColor" format="reference|color"/>
         
         <attr name="titleText" format="reference|string" />
         <attr name="titleTextSize" format="dimension" />

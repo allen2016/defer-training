@@ -1,5 +1,18 @@
 <resources>
 
     <string name="app_name">DeferTrain</string>
+    
+    <string name="indexBtn1">注册新账户</string>
+    <string name="indexBtn2">已有账户？这里登录</string>
 
+    <string name="homeTitle">益智宝</string>
+    <string name="homeBtn1">益智训练</string>
+    <string name="homeBtn2">益智小贴士</string>
+    <string name="homeBtn3">我关注的人</string>
+    <string name="homeBtn4">个人中心</string>
+    
+    <string name="new_version">已有更新的版本！</string>
+    <string name="updateBtn">现在更新</string>
+    <string name="cancelBtn">以后再说</string>
+    
 </resources>

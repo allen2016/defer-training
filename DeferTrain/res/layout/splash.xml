@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <ImageView 
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:src="@drawable/ic_launcher"/>
+    
+    <RelativeLayout 
+         android:id="@+id/chkview"
+         android:layout_width="match_parent"
+         android:layout_height="140dp"
+         android:layout_marginLeft="20dp"
+         android:layout_marginRight="20dp"
+         android:background="@drawable/splash_bg"
+         android:layout_gravity="center"
+         android:visibility="gone" >
+        
+        <TextView 
+            android:id="@+id/hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/new_version"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_below="@id/hint"
+            android:orientation="horizontal">
+            
+            <Button 
+                android:id="@+id/updateBtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                style="@style/SplashBtn1"
+                android:text="@string/updateBtn"/>
+            
+            <Button 
+                android:id="@+id/cancalBtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                style="@style/SplashBtn2"
+                android:text="@string/cancelBtn"/>
+            
+        </LinearLayout>
+        
+            
+        
+    </RelativeLayout>
+     
+
+</FrameLayout>
+

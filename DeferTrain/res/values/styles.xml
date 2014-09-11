@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!--
         Base application theme, dependent on API level. This theme is replaced
@@ -15,6 +15,58 @@
     <!-- Application theme. -->
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:windowNoTitle">true</item>
     </style>
 
+    <!-- Index Activity -->
+    <style name="IndexBtn" parent="@android:style/ButtonBar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@android:color/white</item>
+ 	</style>
+ 	
+    <style name="IndexBtn1" parent="@style/IndexBtn">
+        <item name="android:background">@drawable/index_btn1</item>
+ 	</style>  
+ 	
+    <style name="IndexBtn2" parent="@style/IndexBtn">
+        <item name="android:background">@drawable/index_btn2</item>
+ 	</style> 
+    
+    <!-- Home Activity -->
+    <style name="HomeBtn" parent="@android:style/ButtonBar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:layout_margin">1dp</item>
+        <item name="android:clickable">true</item>
+ 	</style>
+ 	
+    <style name="HomeBtn1" parent="@style/HomeBtn">
+        <item name="android:background">@drawable/home_btn1</item>
+ 	</style>  
+ 	
+    <style name="HomeBtn2" parent="@style/HomeBtn">
+        <item name="android:background">@drawable/home_btn2</item>
+ 	</style>
+ 	
+    <!-- Splash Activity -->
+    <style name="SplashBtn" parent="@android:style/ButtonBar">
+        <item name="android:layout_height">40dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:clickable">true</item>
+ 	</style>
+ 	
+    <style name="SplashBtn1" parent="@style/SplashBtn">
+        <item name="android:background">@drawable/splash_btn1</item>
+ 	</style>
+ 	
+    <style name="SplashBtn2" parent="@style/SplashBtn">
+        <item name="android:background">@drawable/splash_btn2</item>
+ 	</style>
+ 	
 </resources>
