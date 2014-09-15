@@ -17,11 +17,9 @@ import android.widget.Toast;
 import com.mycustom.tools.ConstantValues;
 import com.mycustom.tools.RequestService;
 import com.neusoft.defertrain.R;
+import com.neusoft.tools.ConstantKey;
 
 public class SplashAty extends Activity {
-
-	private final static String WIZARD_ACTION_STRING = "com.neusoft.cao.WIZARD";
-	private final static String HOME_ACTION_STRING = "com.neusoft.cao.HOME";
 
 	private static final int GO_HOME = 1000;
 	private static final int GO_GUIDE = 1001;
@@ -104,7 +102,7 @@ public class SplashAty extends Activity {
 
 	private void goHome() {
 		Intent intent = new Intent();
-		intent.setAction(HOME_ACTION_STRING);
+		intent.setAction(ConstantKey.HOME_ACTION);
 		startActivity(intent);
 		finish();
 	}
@@ -114,7 +112,7 @@ public class SplashAty extends Activity {
 		preferences.edit().putBoolean(FIRST_PREFER_NAME, false).commit();
 		
 		Intent intent = new Intent();
-		intent.setAction(WIZARD_ACTION_STRING);
+		intent.setAction(ConstantKey.WIZARD_ACTION);
 		startActivity(intent);
 		finish();
 	}

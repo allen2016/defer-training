@@ -21,26 +21,34 @@
 <!--             </intent-filter> -->
 <!--         </activity> -->
                 
+        <activity 
+            android:name="com.neusoft.activities.SplashAty">
+            <intent-filter>
+                <action android:name="com.neusoft.cao.Splash"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+                
 <!--         <activity  -->
-<!--             android:name="com.neusoft.activities.WizardAty"> -->
+<!--             android:name="com.neusoft.activities.WizardAty" > -->
 <!--             <intent-filter> -->
 <!--                 <action android:name="android.intent.action.MAIN"/> -->
 <!--                 <category android:name="android.intent.category.LAUNCHER"/> -->
 <!--             </intent-filter> -->
 <!--         </activity> -->
         
-<!-- 		<activity  -->
-<!--             android:name="com.neusoft.activities.WizardAty"> -->
-<!--             <intent-filter> -->
-<!--                 <action android:name="com.neusoft.cao.WIZARD"/> -->
-<!--                 <category android:name="android.intent.category.DEFAULT"/> -->
-<!--             </intent-filter> -->
-<!--         </activity> -->
+		<activity 
+            android:name="com.neusoft.activities.WizardAty">
+            <intent-filter>
+                <action android:name="com.neusoft.cao.WIZARD"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
                 
         <activity 
             android:name="com.neusoft.activities.IndexAty">
             <intent-filter>
-                <action android:name="android.intent.action.sdsds"/>
+                <action android:name="com.neusoft.cao.Index"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>

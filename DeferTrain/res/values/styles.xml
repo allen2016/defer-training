@@ -69,4 +69,15 @@
         <item name="android:background">@drawable/splash_btn2</item>
  	</style>
  	
+    <style name="WizardBtn" parent="@android:style/ButtonBar">
+        <item name="android:layout_width">130dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:layout_marginBottom">80dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:background">@drawable/wizard_btn</item>
+ 	</style>
+ 	
 </resources>

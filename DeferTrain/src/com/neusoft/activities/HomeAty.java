@@ -1,133 +1,119 @@
 package com.neusoft.activities;
 
-import android.app.Activity;
-import android.content.Intent;
+import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
+import android.support.v4.app.Fragment;
+import android.view.Menu;
+import android.view.MenuItem;
 
-import com.mycustom.view.TitleView;
+import com.mycustom.view.slidingmenu.lib.SlidingMenu;
+import com.mycustom.view.slidingmenu.lib.app.SlidingFragmentActivity;
 import com.neusoft.defertrain.R;
 
-public class HomeAty extends Activity {
+@SuppressLint("NewApi")
+public class HomeAty extends SlidingFragmentActivity {
 
-	private final static String LEFTICON_ACTION_STRING = "";
-	private final static String RIGHTICON_ACTION_STRING = "";
-	private final static String TRAIN_ACTION_STRING = "";
-	private final static String TIPS_ACTION_STRING = "";
-	private final static String FRIEND_ACTION_STRING = "";
-	private final static String CENTER_ACTION_STRING = "";
+	private SlidingMenu menu;
 	
-	private TitleView titleView;
-	private Button trainBtn;
-	private Button tipsBtn;
-	private Button friendBtn;
-	private Button centerBtn;
+	private Fragment mContent;
 	
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
+	public void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		
-		setContentView(R.layout.home);
+		// 初始化滑动视图         
+		initSlidingMenu(savedInstanceState);
 		
-		findView();
-		
-		init();
-		
-		setOnClickListener();
-
 	}
 
-	private void findView() {
+	private void initSlidingMenu(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
-		titleView = (TitleView) findViewById(R.id.mytitleview);
-		trainBtn = (Button) findViewById(R.id.trainBtn);
-		tipsBtn = (Button) findViewById(R.id.tipsBtn);
-		friendBtn = (Button) findViewById(R.id.friendBtn);
-		centerBtn = (Button) findViewById(R.id.centerBtn);
-	}
-
-	private void init() {
-		// TODO Auto-generated method stub
-		titleView = new TitleView(this);
-		titleView.setTitleText(getString(R.string.homeTitle));
-		titleView.setLeftIcon(R.drawable.ic_launcher);
-		titleView.setRightIcon(R.drawable.ic_launcher);
-		titleView.setLeftIconVisible(View.VISIBLE);
-		titleView.setRightIconVisible(View.VISIBLE);
-		titleView.setBackgroundColor(getResources().getColor(R.color.home_title));
+		// 设置标题栏的标题        
+		setTitle(getString(R.string.homeTitle)); 
+		// 设置是否能够使用ActionBar来滑动         
+		setSlidingActionBarEnabled(true);           
+//		// 设置是否显示Home图标按钮         
+//		ActionBar actionBar = getActionBar();
+//		actionBar.setDisplayHomeAsUpEnabled(true);         
+//		actionBar.setIcon(R.drawable.ic_launcher); 
+//		//使用左上方icon可点，这样在onOptionsItemSelected里面才可以监听到R.id.home
+//		actionBar.setDisplayHomeAsUpEnabled(true);
+        
+		// 如果保存的状态不为空则得到之前保存的Fragment，否则实例化MyFragment         
+		if (savedInstanceState != null) {             
+			mContent = getSupportFragmentManager().getFragment(savedInstanceState, "mContent");         
+		}         
+		if (mContent == null) {            
+			mContent = new HomeContentFrg();         
+		} 
+		
+		// 设置主界面视图         
+		setContentView(R.layout.home_content);      
+		HomeContentFrg homeContentFrg = new HomeContentFrg();
+		homeContentFrg.setContainer(this);
+		getSupportFragmentManager().beginTransaction().replace(R.id.content_frame, homeContentFrg).commit();
+		
+		// 设置滑动菜单的视图         
+		setBehindContentView(R.layout.home_menu);         
+		getSupportFragmentManager().beginTransaction().replace(R.id.menu_frame, new HomeMenuFrg()).commit(); 
+		
+		// 设置滑动菜单的属性值   
+		menu = getSlidingMenu();
+		menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);  
+		menu.setShadowWidthRes(R.dimen.shadow_width);  
+		menu.setShadowDrawable(R.drawable.home_menu_shadow);  
+		menu.setBehindOffsetRes(R.dimen.slidingmenu_offset);  
+		menu.setFadeDegree(0.35f);  
+		
 	}
 	
-	private void setOnClickListener() {
-		// TODO Auto-generated method stub
-		
-		titleView.setLeftIconOnClick(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				Intent intent = new Intent();
-				intent.setAction(LEFTICON_ACTION_STRING);
-				startActivity(intent);
-			}
-		});
-		
-		titleView.setRightIconOnClick(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				Intent intent = new Intent();
-				intent.setAction(RIGHTICON_ACTION_STRING);
-				startActivity(intent);
-			}
-		});
-		
-		trainBtn.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				Intent intent = new Intent();
-				intent.setAction(TRAIN_ACTION_STRING);
-				startActivity(intent);
-			}
-		});
-		
-		tipsBtn.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				Intent intent = new Intent();
-				intent.setAction(TIPS_ACTION_STRING);
-				startActivity(intent);
-			}
-		});
-		
-		friendBtn.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				Intent intent = new Intent();
-				intent.setAction(FRIEND_ACTION_STRING);
-				startActivity(intent);
-			}
-		});
-		
-		centerBtn.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				Intent intent = new Intent();
-				intent.setAction(CENTER_ACTION_STRING);
-				startActivity(intent);
-			}
-		});
+	/**      * 保存Fragment的状态      */    
+	@Override    
+	protected void onSaveInstanceState(Bundle outState) {         
+		super.onSaveInstanceState(outState);         
+		getSupportFragmentManager().putFragment(outState, "mContent", mContent);     
 	}
 	
+	@Override  
+	public void onBackPressed() {  
+		//点击返回键关闭滑动菜单   
+		if (menu.isMenuShowing()) {  
+			menu.showContent();  
+		} else {  
+			super.onBackPressed();  
+		}  
+	}
+	
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+    
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+    	
+        switch (item.getItemId()) {
+        
+        	case android.R.id.home:
+            
+            toggle(); //动态判断自动关闭或开启SlidingMenu
+//          getSlidingMenu().showMenu();//显示SlidingMenu
+//          getSlidingMenu().showContent();//显示内容
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+    
+    /**      
+     *  切换视图     
+     *  @param fragment      
+     */    
+    public void switchContent(Fragment fragment) {         
+    	mContent = fragment;         
+    	getSupportFragmentManager().beginTransaction().replace(R.id.content_frame, fragment).commit();         
+    	getSlidingMenu().showContent();     
+    }
 }

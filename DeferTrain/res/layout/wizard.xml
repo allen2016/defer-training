@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:uview="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/splash_bg" >
+    android:background="@color/wizard_bg" >
 
     <android.support.v4.view.ViewPager
         android:id="@+id/pager"
@@ -17,12 +17,17 @@
         android:id="@+id/indicator"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="#FFCCCCCC"
-        android:padding="10dip"
-        app:radius="10dp"
-        app:fillColor="#FF888888"
-        app:pageColor="#88FF0000"
-        app:strokeColor="#FF000000"
-        app:strokeWidth="2dp"  />
+        android:background="@color/wizard_bg"
+        android:padding="10dp"
+        uview:radius="5dp"
+        uview:pageColor="#FF888888"
+        uview:strokeColor="#FF000000"
+        uview:strokeWidth="1dp"  />
+    
+    <Button 
+        android:id="@+id/startBtn"
+	    android:text="@string/startBtn"
+        style="@style/WizardBtn"
+        android:visibility="invisible" />
 
 </LinearLayout>

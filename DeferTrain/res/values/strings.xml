@@ -15,4 +15,16 @@
     <string name="updateBtn">现在更新</string>
     <string name="cancelBtn">以后再说</string>
     
+    <string name="startBtn">点击这里开始</string>
+    
+    <string-array name="homeMenu">
+        <item>首页</item>
+        <item>账户设置</item>
+        <item>训练提醒</item>
+        <item>清理 </item>
+        <item>使用协议与隐私条款</item>
+        <item>意见反馈</item>
+        <item>关于</item>
+    </string-array>
+    
 </resources>

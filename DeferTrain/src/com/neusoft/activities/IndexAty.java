@@ -8,12 +8,10 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 
 import com.neusoft.defertrain.R;
+import com.neusoft.tools.ConstantKey;
 
 public class IndexAty extends Activity {
 
-	private final static String LOGIN_ACTION_STRING = "";
-	private final static String REGISTER_ACTION_STRING = "";
-	
 	private Button loginBtn;
 	private Button registerBtn;
 	
@@ -47,7 +45,7 @@ public class IndexAty extends Activity {
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				Intent intent = new Intent();
-				intent.setAction(LOGIN_ACTION_STRING);
+				intent.setAction(ConstantKey.LOGIN_ACTION);
 				startActivity(intent);
 			}
 		});
@@ -58,7 +56,7 @@ public class IndexAty extends Activity {
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				Intent intent = new Intent();
-				intent.setAction(REGISTER_ACTION_STRING);
+				intent.setAction(ConstantKey.REGISTER_ACTION);
 				startActivity(intent);
 			}
 		});

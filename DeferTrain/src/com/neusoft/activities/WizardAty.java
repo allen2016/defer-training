@@ -1,8 +1,6 @@
 package com.neusoft.activities;
 
-import java.util.List;
-
-import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -10,26 +8,28 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
-import android.widget.LinearLayout.LayoutParams;
-import android.widget.TextView;
+import android.widget.Button;
+import android.widget.ImageView;
 
 import com.mycustom.view.viewpagerindicator.CirclePageIndicator;
 import com.neusoft.defertrain.R;
+import com.neusoft.tools.ConstantKey;
 
 public class WizardAty extends FragmentActivity {
 
-	private final static String LOGIN_ACTION_STRING = "";
-	private final static String REGISTER_ACTION_STRING = "";
+	private final static String Index_ACTION_STRING = "com.neusoft.cao.Index";
+	
+	private Button startBtn;
 	
 	private ViewPager viewPager;
 	private CirclePageIndicator pageIndicator;
 	private FragmentPagerAdapter pageAdapter;
-	private List<View> views;
+	
+	private static final int[] LAYOUT_CONTENT = new int[] { R.drawable.u7 , R.drawable.u9, R.drawable.u8, R.drawable.u9 }; 
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -52,18 +52,23 @@ public class WizardAty extends FragmentActivity {
 		pageIndicator = (CirclePageIndicator) findViewById(R.id.indicator);
 		
 		pageAdapter = new WizardIntroAdapter(getSupportFragmentManager()); 
+		
+		startBtn = (Button) findViewById(R.id.startBtn);
 	}
 
 	private void init() {
 		// TODO Auto-generated method stub
-		
-		final float density = getResources().getDisplayMetrics().density;
-		pageIndicator.setBackgroundColor(0xFFCCCCCC);
-		pageIndicator.setRadius(10 * density);
-		pageIndicator.setPageColor(0x880000FF);
-		pageIndicator.setFillColor(0xFF888888);
-		pageIndicator.setStrokeColor(0xFF000000);
-		pageIndicator.setStrokeWidth(2 * density);
+		startBtn.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent intent = new Intent();
+				intent.setAction(ConstantKey.INDEX_ACTION);
+				startActivity(intent);
+				finish();
+			}
+		});
 		
 		viewPager.setAdapter(pageAdapter);  
 		pageIndicator.setViewPager(viewPager);
@@ -78,7 +83,11 @@ public class WizardAty extends FragmentActivity {
 			@Override
 			public void onPageSelected(int arg0) {
 				// TODO Auto-generated method stub
-				
+				if (arg0==LAYOUT_CONTENT.length-1) {
+					startBtn.setVisibility(View.VISIBLE);
+				}else {
+					startBtn.setVisibility(View.INVISIBLE);
+				}
 			}
 			
 			@Override
@@ -105,17 +114,17 @@ public class WizardAty extends FragmentActivity {
 
         @Override
         public Fragment getItem(int position) {
-            return null; //ContentFragment.newInstance(CONTENT[position % CONTENT.length]);
+            return ContentFragment.newInstance(position % LAYOUT_CONTENT.length);
         }
 
         @Override
         public CharSequence getPageTitle(int position) {
-            return "SDSDSD";  //CONTENT[position % CONTENT.length].toUpperCase();
+            return "";  
         }
 
         @Override
         public int getCount() {
-          return 0; //CONTENT.length;
+          return LAYOUT_CONTENT.length;
         }
     }
 
@@ -123,19 +132,14 @@ public class WizardAty extends FragmentActivity {
 	public static class ContentFragment extends Fragment {
 		
 	    private static final String KEY_CONTENT = "TestFragment:Content";
-	    private String mContent = "";
+	    private int mContent;
 
-	    public static ContentFragment newInstance(String content) {
+	    public static ContentFragment newInstance(int index) {
 	    	
 	        ContentFragment fragment = new ContentFragment();
 
-	        StringBuilder builder = new StringBuilder();
-	        for (int i = 0; i < 10; i++) {
-	            builder.append(content).append(" ");
-	        }
-	        builder.deleteCharAt(builder.length() - 1);
-	        fragment.mContent = builder.toString();
-
+	        fragment.mContent = index;
+	        
 	        return fragment;
 	    }
 
@@ -144,31 +148,23 @@ public class WizardAty extends FragmentActivity {
 	        super.onCreate(savedInstanceState);
 
 	        if ((savedInstanceState != null) && savedInstanceState.containsKey(KEY_CONTENT)) {
-	            mContent = savedInstanceState.getString(KEY_CONTENT);
+	            mContent = savedInstanceState.getInt(KEY_CONTENT);
 	        }
 	    }
 
 	    @Override
 	    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 	    	
-	        TextView text = new TextView(getActivity());
-	        text.setGravity(Gravity.CENTER);
-	        text.setText(mContent);
-	        text.setTextSize(20 * getResources().getDisplayMetrics().density);
-	        text.setPadding(20, 20, 20, 20);
-
-	        LinearLayout layout = new LinearLayout(getActivity());
-	        layout.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
-	        layout.setGravity(Gravity.CENTER);
-	        layout.addView(text);
-
-	        return layout;
+	    	ImageView imgView = (ImageView) inflater.inflate(R.layout.wizard_item, null);
+	    	imgView.setBackgroundResource(LAYOUT_CONTENT[mContent]);
+	    	
+	        return imgView;
 	    }
 
 	    @Override
 	    public void onSaveInstanceState(Bundle outState) {
 	        super.onSaveInstanceState(outState);
-	        outState.putString(KEY_CONTENT, mContent);
+	        outState.putInt(KEY_CONTENT, mContent);
 	    }
 	}
 }
