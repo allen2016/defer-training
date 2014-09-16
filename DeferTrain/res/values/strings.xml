@@ -27,4 +27,6 @@
         <item>关于</item>
     </string-array>
     
+    <string name="readFileErr">读取二维码图片失败</string>
+    
 </resources>
