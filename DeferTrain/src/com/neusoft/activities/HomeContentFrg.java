@@ -57,12 +57,12 @@ public class HomeContentFrg extends Fragment {
 	
 	private void init() {
 		// TODO Auto-generated method stub
-		titleView.setTitleText(getString(R.string.homeTitle));
-		titleView.setLeftIcon(R.drawable.ic_launcher);
-		titleView.setRightIcon(R.drawable.ic_launcher);
-		titleView.setLeftIconVisible(View.VISIBLE);
-		titleView.setRightIconVisible(View.VISIBLE);
-		titleView.setBackgroundColor(getResources().getColor(R.color.home_title));
+//		titleView.setTitleText(getString(R.string.homeTitle));
+//		titleView.setLeftIcon(R.drawable.ic_launcher);
+//		titleView.setRightIcon(R.drawable.ic_launcher);
+//		titleView.setLeftIconVisible(View.VISIBLE);
+//		titleView.setRightIconVisible(View.VISIBLE);
+//		titleView.setBackgroundColor(getResources().getColor(R.color.home_title));
 		
 	}
 	

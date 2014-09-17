@@ -9,6 +9,7 @@ import android.content.ContentResolver;
 import android.content.Intent;
 import android.content.res.AssetFileDescriptor;
 import android.graphics.Bitmap;
+import android.hardware.Camera;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
@@ -51,11 +52,14 @@ public class QRScanAty extends MipcaActivityCapture  implements Callback {
 	private final String IMAGE_TYPE = "image/*";
 	private final int IMAGE_CODE = 1000; 
 
+	private boolean isFlashOpen = false;
+	
 	private TitleView titleView;
 	
 	private Button albumBtn;
 	private Button lightBtn;
 	
+	private SurfaceView surfaceView;
 	private ViewfinderView viewfinderView;
 	private boolean hasSurface;
 	private Vector<BarcodeFormat> decodeFormats;
@@ -66,6 +70,7 @@ public class QRScanAty extends MipcaActivityCapture  implements Callback {
 	private boolean playBeep;
 	private static final float BEEP_VOLUME = 0.10f;
 	private boolean vibrate;
+	
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -87,7 +92,7 @@ public class QRScanAty extends MipcaActivityCapture  implements Callback {
 		titleView = (TitleView) findViewById(R.id.mytitleview);
 		
 		viewfinderView = (ViewfinderView) findViewById(R.id.viewfinder_view);
-//		surfaceView = (SurfaceView) findViewById(R.id.preview_view);
+		surfaceView = (SurfaceView) findViewById(R.id.preview_view);
 		
 		albumBtn = (Button) findViewById(R.id.albumBtn);
 		lightBtn = (Button) findViewById(R.id.lightBtn);
@@ -121,47 +126,26 @@ public class QRScanAty extends MipcaActivityCapture  implements Callback {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Intent intent = new Intent();
-				intent.setAction(ConstantKey.REGISTER_ACTION);
-				startActivity(intent);
+				closeCamera();
+				isFlashOpen = !isFlashOpen;
+				openCamera();
 			}
+
 		});
 		
 	}
 	
-	@SuppressWarnings("deprecation")
 	@Override
 	protected void onResume() {
 		super.onResume();
-		SurfaceView surfaceView = (SurfaceView) findViewById(R.id.preview_view);
-		SurfaceHolder surfaceHolder = surfaceView.getHolder();
-		if (hasSurface) {
-			initCamera(surfaceHolder);
-		} else {
-			surfaceHolder.addCallback(this);
-			surfaceHolder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
-		}
-		decodeFormats = null;
-		characterSet = null;
-
-		playBeep = true;
-		AudioManager audioService = (AudioManager) getSystemService(AUDIO_SERVICE);
-		if (audioService.getRingerMode() != AudioManager.RINGER_MODE_NORMAL) {
-			playBeep = false;
-		}
-		initBeepSound();
-		vibrate = true;
+		openCamera();
 		
 	}
 
 	@Override
 	protected void onPause() {
 		super.onPause();
-		if (handler != null) {
-			handler.quitSynchronously();
-			handler = null;
-		}
-		CameraManager.get().closeDriver();
+		closeCamera();
 	}
 
 	@Override
@@ -271,8 +255,9 @@ public class QRScanAty extends MipcaActivityCapture  implements Callback {
 				
 				if (checkQRValid(resultString)) {
 					
-					intent.setAction("");
-					startActivity(intent);
+//					intent.setAction("");
+//					startActivity(intent);
+					Toast.makeText(this, "Scan success!", Toast.LENGTH_SHORT).show();
 					
 				}else {
 					
@@ -285,13 +270,14 @@ public class QRScanAty extends MipcaActivityCapture  implements Callback {
 	}
 
 	private void failJump(Intent intent) {
-		intent.setAction(ConstantKey.SCANFAIL_ACTION);
-		startActivity(intent);
+//		intent.setAction(ConstantKey.SCANFAIL_ACTION);
+//		startActivity(intent);
+		Toast.makeText(this, "Scan fail", Toast.LENGTH_SHORT).show();
 	}
 
 	private boolean checkQRValid(String result) {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 	@Override
@@ -326,7 +312,9 @@ public class QRScanAty extends MipcaActivityCapture  implements Callback {
 	
 	private void initCamera(SurfaceHolder surfaceHolder) {
 		try {
-			CameraManager.get().openDriver(surfaceHolder);
+			
+			CameraManager.get().openDriver(surfaceHolder, isFlashOpen);
+			
 		} catch (IOException ioe) {
 			return;
 		} catch (RuntimeException e) {
@@ -382,4 +370,32 @@ public class QRScanAty extends MipcaActivityCapture  implements Callback {
 		}
 	};
 
+	private void closeCamera() {
+		if (handler != null) {
+			handler.quitSynchronously();
+			handler = null;
+		}
+		CameraManager.get().closeDriver();
+	}
+	
+	@SuppressWarnings("deprecation")
+	private void openCamera() {
+		SurfaceHolder surfaceHolder = surfaceView.getHolder();
+		if (hasSurface) {
+			initCamera(surfaceHolder);
+		} else {
+			surfaceHolder.addCallback(this);
+			surfaceHolder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
+		}
+		decodeFormats = null;
+		characterSet = null;
+
+		playBeep = true;
+		AudioManager audioService = (AudioManager) getSystemService(AUDIO_SERVICE);
+		if (audioService.getRingerMode() != AudioManager.RINGER_MODE_NORMAL) {
+			playBeep = false;
+		}
+		initBeepSound();
+		vibrate = true;
+	}
 }

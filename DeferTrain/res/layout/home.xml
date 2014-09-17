@@ -10,6 +10,8 @@
          android:layout_height="50dp"
          android:id="@+id/mytitleview"
          uview:titleText="@string/homeTitle"
+         uview:titleTextSize="16sp"
+         uview:titleTextColor="@android:color/white"
          uview:leftIcon="@drawable/ic_launcher"
          uview:rightIcon="@drawable/ic_launcher"
          uview:leftIconVisible="visible"
@@ -20,13 +22,13 @@
          android:id="@+id/top_img_view"
          android:layout_width="match_parent"
          android:layout_height="0dp"
-         android:layout_weight="3"
+         android:layout_weight="4"
          android:src="@drawable/ic_launcher"/>
      
      <TableLayout 
          android:layout_width="match_parent"
-         android:layout_height="0dp"
-         android:layout_weight="3"
+         android:layout_height="250dp"
+         android:minHeight="220dp" 
          android:layout_marginLeft="13dp"
          android:layout_marginRight="13dp"
          android:layout_marginTop="10dp"

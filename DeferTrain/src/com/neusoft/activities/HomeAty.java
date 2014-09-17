@@ -41,9 +41,9 @@ public class HomeAty extends SlidingFragmentActivity {
 //		actionBar.setDisplayHomeAsUpEnabled(true);
         
 		// 如果保存的状态不为空则得到之前保存的Fragment，否则实例化MyFragment         
-		if (savedInstanceState != null) {             
-			mContent = getSupportFragmentManager().getFragment(savedInstanceState, "mContent");         
-		}         
+//		if (savedInstanceState != null) {             
+//			mContent = getSupportFragmentManager().getFragment(savedInstanceState, "mContent");         
+//		}         
 		if (mContent == null) {            
 			mContent = new HomeContentFrg();         
 		} 
@@ -72,7 +72,7 @@ public class HomeAty extends SlidingFragmentActivity {
 	@Override    
 	protected void onSaveInstanceState(Bundle outState) {         
 		super.onSaveInstanceState(outState);         
-		getSupportFragmentManager().putFragment(outState, "mContent", mContent);     
+//		getSupportFragmentManager().putFragment(outState, "mContent", mContent);     
 	}
 	
 	@Override  
