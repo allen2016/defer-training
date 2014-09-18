@@ -1,0 +1,24 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="CustomerCao" parent="@android:style/ButtonBar">
+        <item name="android:layout_height">40dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:clickable">true</item>
+ 	</style>
+ 	
+    <style name="ConfirmBtn" parent="@style/CustomerCao">
+        <item name="android:background">@drawable/confirm_btn</item>
+ 	</style>
+ 	
+    <style name="CancelBtn" parent="@style/CustomerCao">
+        <item name="android:background">@drawable/cancel_btn</item>
+ 	</style>
+ 	
+     <style name="AnimationPreview">
+        <item name="android:windowEnterAnimation">@anim/fade_in</item>
+        <item name="android:windowExitAnimation">@anim/fade_out</item>
+    </style>
+    
+</resources>

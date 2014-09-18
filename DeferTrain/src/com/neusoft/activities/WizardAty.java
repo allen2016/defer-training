@@ -29,7 +29,7 @@ public class WizardAty extends FragmentActivity {
 	private CirclePageIndicator pageIndicator;
 	private FragmentPagerAdapter pageAdapter;
 	
-	private static final int[] LAYOUT_CONTENT = new int[] { R.drawable.u7 , R.drawable.u9, R.drawable.u8, R.drawable.u9 }; 
+	private static final int[] LAYOUT_CONTENT = new int[] { R.drawable.home_btn1 , R.drawable.home_btn1, R.drawable.home_btn1, R.drawable.home_btn1 }; 
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

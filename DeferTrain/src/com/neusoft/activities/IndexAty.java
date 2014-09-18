@@ -15,6 +15,8 @@ public class IndexAty extends Activity {
 	private Button loginBtn;
 	private Button registerBtn;
 	
+//	CustomDialogView dialogView;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -26,9 +28,6 @@ public class IndexAty extends Activity {
 		
 		setOnClickListener();
 		
-//		TitleView titleView = (TitleView) findViewById(R.id.mytitleview);
-//		titleView.setTitleText("这是标题栏");
-//		titleView.setBackgroundColor(getResources().getColor(R.color.vpi__background_holo_dark));
 	}
 
 	private void findView() {
@@ -44,9 +43,15 @@ public class IndexAty extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Intent intent = new Intent();
-				intent.setAction(ConstantKey.LOGIN_ACTION);
-				startActivity(intent);
+//				dialogView = new CustomDialogView(IndexAty.this);
+//				dialogView.setTitle("这是标题");
+//				dialogView.setContents("正在努力下载数据，请稍候......");
+//				dialogView.setConfirmButtonText("Confirm");
+//				dialogView.setCancelButtonText("Cancel");
+//				dialogView.show(IndexAty.this);
+//				Intent intent = new Intent();
+//				intent.setAction(ConstantKey.LOGIN_ACTION);
+//				startActivity(intent);
 			}
 		});
 		

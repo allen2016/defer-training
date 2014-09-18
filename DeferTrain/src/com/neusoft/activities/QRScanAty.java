@@ -9,7 +9,6 @@ import android.content.ContentResolver;
 import android.content.Intent;
 import android.content.res.AssetFileDescriptor;
 import android.graphics.Bitmap;
-import android.hardware.Camera;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
@@ -37,15 +36,14 @@ import com.google.zxing.common.HybridBinarizer;
 import com.google.zxing.qrcode.QRCodeReader;
 import com.mycustom.view.TitleView;
 import com.neusoft.defertrain.R;
-import com.neusoft.tools.ConstantKey;
 import com.zxing.camera.CameraManager;
 import com.zxing.decoding.CaptureActivityHandler;
 import com.zxing.decoding.DecodeFormatManager;
 import com.zxing.decoding.InactivityTimer;
+import com.zxing.decoding.RGBLuminanceSource;
 import com.zxing.view.MipcaActivityCapture;
 import com.zxing.view.ViewfinderResultPointCallback;
 import com.zxing.view.ViewfinderView;
-import com.zxing.decoding.RGBLuminanceSource;
 
 public class QRScanAty extends MipcaActivityCapture  implements Callback {
 
@@ -70,7 +68,6 @@ public class QRScanAty extends MipcaActivityCapture  implements Callback {
 	private boolean playBeep;
 	private static final float BEEP_VOLUME = 0.10f;
 	private boolean vibrate;
-	
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -139,7 +136,6 @@ public class QRScanAty extends MipcaActivityCapture  implements Callback {
 	protected void onResume() {
 		super.onResume();
 		openCamera();
-		
 	}
 
 	@Override

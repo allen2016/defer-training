@@ -22,21 +22,23 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         
-<!--         <activity  -->
-<!--             android:name="com.neusoft.activities.QRScanAty"> -->
-<!--             <intent-filter> -->
-<!--                 <action android:name="com.neusoft.cao.QRScan"/> -->
-<!--                 <category android:name="android.intent.category.DEFAULT"/> -->
-<!--             </intent-filter> -->
-<!--         </activity> -->
-        
+        <!-- 二维码扫描页 -->
         <activity 
             android:name="com.neusoft.activities.QRScanAty">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="com.neusoft.cao.QRScan"/>
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
+        
+        <!-- 二维码扫描页 -->
+<!--         <activity  -->
+<!--             android:name="com.neusoft.activities.QRScanAty"> -->
+<!--             <intent-filter> -->
+<!--                 <action android:name="android.intent.action.MAIN"/> -->
+<!--                 <category android:name="android.intent.category.LAUNCHER"/> -->
+<!--             </intent-filter> -->
+<!--         </activity> -->
         
 <!--         <activity  -->
 <!--             android:name="com.neusoft.activities.SplashAty"> -->
@@ -45,7 +47,8 @@
 <!--                 <category android:name="android.intent.category.LAUNCHER"/> -->
 <!--             </intent-filter> -->
 <!--         </activity> -->
-                
+        
+        <!-- 欢迎页-->
         <activity 
             android:name="com.neusoft.activities.SplashAty">
             <intent-filter>
@@ -62,6 +65,7 @@
 <!--             </intent-filter> -->
 <!--         </activity> -->
         
+        <!-- 应用向导页 -->
 		<activity 
             android:name="com.neusoft.activities.WizardAty">
             <intent-filter>
@@ -69,12 +73,21 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
-                
-        <activity 
+        
+		<!-- 首页 -->
+<!--         <activity  -->
+<!--             android:name="com.neusoft.activities.IndexAty"> -->
+<!--             <intent-filter> -->
+<!--                 <action android:name="com.neusoft.cao.Index"/> -->
+<!--                 <category android:name="android.intent.category.DEFAULT"/> -->
+<!--             </intent-filter> -->
+<!--         </activity> -->
+        
+                <activity 
             android:name="com.neusoft.activities.IndexAty">
             <intent-filter>
-                <action android:name="com.neusoft.cao.Index"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         
@@ -85,14 +98,15 @@
 <!--                 <category android:name="android.intent.category.LAUNCHER"/> -->
 <!--             </intent-filter> -->
 <!--         </activity> -->
-                
-<!--         <activity  -->
-<!--             android:name="com.neusoft.activities.HomeAty"> -->
-<!--             <intent-filter> -->
-<!--                 <action android:name="com.neusoft.cao.HOME"/> -->
-<!--                 <category android:name="android.intent.category.DEFAULT"/> -->
-<!--             </intent-filter> -->
-<!--         </activity> -->
+        
+        <!-- 主界面页 -->
+        <activity 
+            android:name="com.neusoft.activities.HomeAty">
+            <intent-filter>
+                <action android:name="com.neusoft.cao.HOME"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
         
     </application>
 
