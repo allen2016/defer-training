@@ -21,10 +21,10 @@ import com.neusoft.tools.ConstantKey;
  */
 public class HomeMenuFrg extends ListFragment {
 
-	private int[] iconList = {R.drawable.ic_launcher, R.drawable.ic_launcher,
-			                  R.drawable.ic_launcher,R.drawable.ic_launcher,
-			                  R.drawable.ic_launcher,R.drawable.ic_launcher,
-			                  R.drawable.ic_launcher };
+	private int[] iconList = {R.drawable.home, R.drawable.setting2,
+			                  R.drawable.hint,R.drawable.trash,
+			                  R.drawable.terms,R.drawable.feedback,
+			                  R.drawable.about };
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,

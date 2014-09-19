@@ -28,5 +28,6 @@
     </string-array>
     
     <string name="readFileErr">读取二维码图片失败</string>
+    <string name="QRScanTitle">扫一扫</string>
     
 </resources>

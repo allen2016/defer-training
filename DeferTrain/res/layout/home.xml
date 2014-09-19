@@ -12,8 +12,8 @@
          uview:titleText="@string/homeTitle"
          uview:titleTextSize="16sp"
          uview:titleTextColor="@android:color/white"
-         uview:leftIcon="@drawable/ic_launcher"
-         uview:rightIcon="@drawable/ic_launcher"
+         uview:leftIcon="@drawable/setting2"
+         uview:rightIcon="@drawable/calendar"
          uview:leftIconVisible="visible"
          uview:rightIconVisible="visible"
          uview:viewBgColor="@color/home_title" />
@@ -23,7 +23,7 @@
          android:layout_width="match_parent"
          android:layout_height="0dp"
          android:layout_weight="4"
-         android:src="@drawable/ic_launcher"/>
+         android:src="@drawable/brain"/>
      
      <TableLayout 
          android:layout_width="match_parent"
@@ -40,28 +40,28 @@
 	             android:id="@+id/trainBtn" 
 	             android:text="@string/homeBtn1"
 	             style="@style/HomeBtn1"
-	             android:drawableTop="@drawable/ic_launcher" />
+	             android:drawableTop="@drawable/educational_training" />
 	         
 	         <Button 
 	             android:id="@+id/tipsBtn" 
 	             android:layout_marginTop="2dp"
 	             android:text="@string/homeBtn2"
 	             style="@style/HomeBtn2"
-	             android:drawableTop="@drawable/ic_launcher" />     
+	             android:drawableTop="@drawable/tips" />     
          </TableRow>
          <TableRow>
 	         <Button 
 	             android:id="@+id/friendBtn" 
 	             android:text="@string/homeBtn3"
 	             style="@style/HomeBtn2"
-	             android:drawableTop="@drawable/ic_launcher" />
+	             android:drawableTop="@drawable/my_friends" />
 	         
 	         <Button 
 	             android:id="@+id/centerBtn" 
 	             android:layout_marginTop="2dp"
 	             android:text="@string/homeBtn4"
 	             style="@style/HomeBtn1"
-	             android:drawableTop="@drawable/ic_launcher" />          
+	             android:drawableTop="@drawable/center" />          
          </TableRow>
      </TableLayout>
      

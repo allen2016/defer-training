@@ -34,14 +34,14 @@
 		        android:layout_width="0dp"
 		        android:layout_height="50dp"
 		        android:layout_weight="1"
-		        android:background="@drawable/ic_launcher"/>
+		        android:background="@drawable/image"/>
 		    
 		    <Button 
 		        android:id="@+id/lightBtn"
 		        android:layout_width="0dp"
 		        android:layout_height="50dp"
 		        android:layout_weight="1"
-		        android:background="@drawable/ic_launcher"/>
+		        android:background="@drawable/light"/>
 		    	    
 		</LinearLayout>
         
@@ -50,7 +50,7 @@
 	         android:layout_height="50dp"
 	         android:layout_alignParentTop="true"
 	         android:id="@+id/mytitleview"
-	         uview:titleText="@string/homeTitle"
+	         uview:titleText="@string/QRScanTitle"
 	         uview:leftIcon="@drawable/ic_launcher" 
 	         uview:leftIconVisible="visible"
 	         uview:viewBgColor="@color/home_title" />
