@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:uview="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5DC"
+    android:orientation="vertical" >
+
+    <com.mycustom.view.TitleView
+         android:layout_width="match_parent"  
+         android:layout_height="50dp"
+         android:id="@+id/mytitleview"
+         uview:titleText="@string/homeTitle"
+         uview:leftIcon="@drawable/ic_launcher"
+         uview:rightIcon="@drawable/ic_launcher"
+         uview:leftIconVisible="visible"
+         uview:rightIconVisible="visible"
+         uview:viewBgColor="@color/home_title" />
+<ImageView 
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:background="@drawable/ic_launcher"
+    android:layout_weight="1"/>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:layout_marginTop="2dp" 
+    android:background="#FFFFFF"
+    android:layout_weight="1">
+
+    <ImageView
+        android:id="@+id/headportrait"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="40dp"
+        android:background="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/headportrait"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/information"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/headportrait"
+        android:layout_below="@+id/name"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="40dp"
+        android:text="" />
+</RelativeLayout>
+<TableRow 
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_marginTop="5dp"
+    android:background="#FFFFFF"
+    android:layout_weight="1">
+<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"
+        android:text="@string/additioninformation" />
+<TextView
+        android:id="@+id/additioninformation"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_marginLeft="40dp"
+        android:text="55" 
+        android:textColor="#708090"/>
+</TableRow>
+<TableRow 
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_marginTop="5dp"
+    android:background="#FFFFFF"
+    android:layout_weight="1">
+<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"
+        android:text="@string/ID" />
+<TextView
+        android:id="@+id/ID"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_marginLeft="70dp"
+        android:text="77" 
+        android:textColor="#708090"/>
+</TableRow>
+<TableRow 
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="#FFFFFF"
+    android:layout_marginTop="10dp"
+    android:layout_weight="1">
+<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"
+        android:text="@string/train_plan" />
+<ToggleButton
+    android:id="@+id/togtraining_plan_off"
+     android:layout_marginLeft="50dp"
+    android:layout_width="100dp"
+    android:layout_height="30dp"
+    android:background="@drawable/training_plan_off"
+    android:checked="true" 
+    android:textOn="" 
+    android:textOff="" 
+     android:text=""
+     android:visibility="gone" />
+<ToggleButton
+    android:id="@+id/togtraining_plan_on"
+     android:layout_marginLeft="50dp"
+    android:layout_width="100dp"
+    android:layout_height="30dp"
+    android:background="@drawable/training_plan_on"
+    android:checked="true" 
+    android:textOn="" 
+    android:textOff="" 
+     android:text="" 
+     android:visibility="gone"/>
+</TableRow>
+<TableRow 
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_marginTop="3dp"
+    android:background="#FFFFFF"
+    android:layout_weight="1">
+<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"
+        android:text="@string/mental" />
+<ToggleButton
+    android:id="@+id/togmental_report_off"
+     android:layout_marginLeft="50dp"
+    android:layout_width="100dp"
+    android:layout_height="30dp"
+    android:background="@drawable/mental_report_off"
+    android:checked="true" 
+    android:textOn="" 
+    android:textOff="" 
+     android:text=""
+     android:visibility="gone"/>
+     <ToggleButton
+    android:id="@+id/togmental_report_on"
+     android:layout_marginLeft="50dp"
+    android:layout_width="100dp"
+    android:layout_height="30dp"
+    android:background="@drawable/mental_report_on"
+    android:checked="true" 
+    android:textOn="" 
+    android:textOff="" 
+     android:text="" 
+     android:visibility="gone"/> 
+</TableRow>
+
+ <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            />
+            
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+    <Button
+        android:id="@+id/agree"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="#FFFFFF"
+        android:text="@string/agree" 
+        android:background="#00BFFF"
+        android:visibility="gone"
+      />
+    </LinearLayout>
+  <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            />
+            
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/shape"
+      />
+    </LinearLayout>
+</LinearLayout>

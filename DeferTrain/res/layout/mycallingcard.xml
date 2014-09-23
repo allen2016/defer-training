@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:uview="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+ <com.mycustom.view.TitleView
+         android:layout_width="match_parent"  
+         android:layout_height="50dp"
+         android:id="@+id/mytitleview"
+         uview:titleText="@string/homeTitle"
+         uview:leftIcon="@drawable/ic_launcher"
+         uview:rightIcon="@drawable/ic_launcher"
+         uview:leftIconVisible="visible"
+         uview:rightIconVisible="visible"
+         uview:viewBgColor="@color/home_title" />
+ 
+    <ImageView 
+        android:layout_width="wrap_content" 
+              android:id="@+id/code_img"
+              android:layout_height="wrap_content" 
+              android:layout_gravity="center_horizontal"
+              android:layout_marginTop="30dp"/>
+ 
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+     <TextView
+       android:id="@+id/textname"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text=""
+       android:gravity="center"
+       android:layout_marginTop="20dp"
+       />
+   <TextView
+       android:id="@+id/textsweep"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="@string/sweep"
+       android:gravity="center"
+       android:layout_marginTop="10dp"
+       />  
+    </LinearLayout>
+</LinearLayout>

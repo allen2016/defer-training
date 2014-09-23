@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:uview="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:gravity="bottom">
+    
+    <com.mycustom.view.TitleView
+         android:layout_width="match_parent"  
+         android:layout_height="50dp"
+         android:id="@+id/mytitleview"
+         uview:titleText="@string/homeTitle"
+         uview:leftIcon="@drawable/ic_launcher"
+         uview:rightIcon="@drawable/ic_launcher"
+         uview:leftIconVisible="visible"
+         uview:rightIconVisible="visible"
+         uview:viewBgColor="@color/home_title" />
+    
+    <TextView 
+       android:id="@+id/txt_idea"
+       android:layout_marginTop="5dp"
+       android:layout_marginBottom="10dp"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:padding="5dp" />
+    
+     <LinearLayout  
+        android:layout_width="fill_parent"  
+        android:layout_height="fill_parent"  
+        android:orientation="vertical"  
+          android:focusable="true" 
+   android:focusableInTouchMode="true"
+        android:layout_weight="1.0">  
+    <ScrollView   
+        android:layout_width="fill_parent"  
+        android:layout_height="wrap_content"  
+        android:fillViewport="true"  
+        android:orientation="vertical"  
+        android:scrollbars="vertical">  
+        <EditText 
+      android:id="@+id/idea"
+      android:padding="5dp"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      />  
+  </ScrollView>   
+   
+    </LinearLayout>  
+   
+ <LinearLayout  
+        android:layout_width="fill_parent"  
+        android:layout_height="wrap_content"  
+        android:orientation="horizontal"   
+        android:layout_gravity="center_horizontal"  
+        android:paddingLeft="20dp"  
+        android:paddingRight="20dp">
+ <TableRow 
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content"
+     >
+      <TextView 
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_weight="2"/>
+  <Button 
+      android:id="@+id/send"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:background="#FFB6C1"
+      android:textColor="#FFFFFF"
+      android:padding="10dp"
+      android:text="@string/send"/>
+  </TableRow>
+    </LinearLayout>
+</LinearLayout>

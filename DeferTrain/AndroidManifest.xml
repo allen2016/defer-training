@@ -83,13 +83,13 @@
 <!--             </intent-filter> -->
 <!--         </activity> -->
         
-                <activity 
+ <!--                <activity 
             android:name="com.neusoft.activities.IndexAty">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-        </activity>
+        </activity>-->
         
 <!--         <activity  -->
 <!--             android:name="com.neusoft.activities.HomeAty"> -->
@@ -107,6 +107,153 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
+        
+        
+        <!-- 个人中心首页 -->
+   <activity  
+             android:name="com.neusoft.activities.PersonalCenterAty"> 
+             <intent-filter> 
+                <action android:name="android.intent.action.MAIN"/> 
+                 <category android:name="android.intent.category.LAUNCHER"/> 
+             </intent-filter> 
+         </activity>
+         
+   
+     <!-- 关注我的人 -->      
+         <activity  
+            android:name="com.neusoft.activities.AttentionMyAty"> 
+           <intent-filter> 
+                <action android:name="com.neusoft.cao.AttentionMy"/> 
+                <category android:name="android.intent.category.DEFAULT"/> 
+            </intent-filter> 
+         </activity> 
+         
+      <!-- 关注人申请 -->   
+         <activity  
+            android:name="com.neusoft.activities.AttentionApplyForAty"> 
+           <intent-filter> 
+                <action android:name="com.neusoft.cao.ATTENTIONAPPLYFOR"/> 
+                <category android:name="android.intent.category.DEFAULT"/> 
+            </intent-filter> 
+         </activity> 
+         
+         
+         <!-- 关注人备注名-->  
+          <activity  
+            android:name="com.neusoft.activities.SetRemarkAty"> 
+           <intent-filter> 
+                <action android:name="com.neusoft.cao.SETREMARK"/> 
+                <category android:name="android.intent.category.DEFAULT"/> 
+            </intent-filter> 
+         </activity> 
+         
+          
+          <!-- 我的名片 -->  
+          <activity  
+            android:name="com.neusoft.activities.MyCallingCardAty"> 
+           <intent-filter> 
+                <action android:name="com.neusoft.cao.mycallingcard"/> 
+                <category android:name="android.intent.category.DEFAULT"/> 
+            </intent-filter> 
+         </activity> 
+         
+          <!-- 礼物信息 -->  
+          <activity  
+            android:name="com.neusoft.activities.GiftInformationAty"> 
+           <intent-filter> 
+                <action android:name="com.neusoft.cao.giftinformation"/> 
+                <category android:name="android.intent.category.DEFAULT"/> 
+            </intent-filter> 
+         </activity>
+         
+          <!-- 我的礼物箱 -->  
+          <activity  
+            android:name="com.neusoft.activities.HomeGiftAty"> 
+           <intent-filter> 
+                <action android:name="com.neusoft.cao.homegift"/> 
+                <category android:name="android.intent.category.DEFAULT"/> 
+            </intent-filter> 
+         </activity>
+         
+          <!-- 互动交流 -->  
+          <activity  
+            android:name="com.neusoft.activities.InteractionAty"> 
+           <intent-filter> 
+                <action android:name="com.neusoft.cao.interaction"/> 
+                <category android:name="android.intent.category.DEFAULT"/> 
+            </intent-filter> 
+         </activity>
+<!-- 互动交流室-->  
+          <activity  
+            android:name="com.neusoft.activities.InteractionRoomAty"> 
+           <intent-filter> 
+                <action android:name="com.neusoft.cao.interactionroom"/> 
+                <category android:name="android.intent.category.DEFAULT"/> 
+            </intent-filter> 
+         </activity>
+    
+      <!-- 账号设置 -->  
+          <activity  
+            android:name="com.neusoft.activities.IDAty"> 
+           <intent-filter> 
+                <action android:name="com.neusoft.cao.id"/> 
+                <category android:name="android.intent.category.DEFAULT"/> 
+            </intent-filter> 
+         </activity>
+         
+           <!-- 修改账号-->  
+          <activity  
+            android:name="com.neusoft.activities.IDAmendAty"> 
+           <intent-filter> 
+                <action android:name="com.neusoft.cao.idamend"/> 
+                <category android:name="android.intent.category.DEFAULT"/> 
+            </intent-filter> 
+         </activity>
+         
+           <!-- 清理-->  
+          <activity  
+            android:name="com.neusoft.activities.CleanAty"> 
+           <intent-filter> 
+                <action android:name="com.neusoft.cao.clean"/> 
+                <category android:name="android.intent.category.DEFAULT"/> 
+            </intent-filter> 
+         </activity>
+          
+          <!-- 反馈意见-->  
+          <activity  
+            android:name="com.neusoft.activities.IdeaAty"> 
+           <intent-filter> 
+                <action android:name="com.neusoft.cao.idea"/> 
+                <category android:name="android.intent.category.DEFAULT"/> 
+            </intent-filter> 
+         </activity>
+          
+           <!-- 关于-->  
+          <activity  
+            android:name="com.neusoft.activities.AboutAty"> 
+           <intent-filter> 
+                <action android:name="com.neusoft.cao.about"/> 
+                <category android:name="android.intent.category.DEFAULT"/> 
+            </intent-filter> 
+         </activity>
+          
+           <!-- 软件介绍-->  
+          <activity  
+            android:name="com.neusoft.activities.SoftwareintroduceAty"> 
+           <intent-filter> 
+                <action android:name="com.neusoft.cao.softwareintroduce"/> 
+                <category android:name="android.intent.category.DEFAULT"/> 
+            </intent-filter> 
+         </activity>
+          
+          <!-- 使用协议与隐私条款-->  
+          <activity  
+            android:name="com.neusoft.activities.TreatyAty"> 
+           <intent-filter> 
+                <action android:name="com.neusoft.cao.treaty"/> 
+                <category android:name="android.intent.category.DEFAULT"/> 
+            </intent-filter> 
+         </activity>
         
     </application>
 
