@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:uview="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+  <com.mycustom.view.TitleView
+         android:layout_width="match_parent"  
+         android:layout_height="50dp"
+         android:id="@+id/mytitleview"
+         uview:titleText="@string/homeTitle"
+         uview:leftIcon="@drawable/ic_launcher"
+         uview:rightIcon="@drawable/ic_launcher"
+         uview:leftIconVisible="visible"
+         uview:rightIconVisible="visible"
+         uview:viewBgColor="@color/home_title" />   
+         
+<ImageButton 
+    android:id="@+id/headportrait"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:layout_weight="1"/>
+<TableRow 
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="#FFFFFF"
+    android:layout_weight="1">
+<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"
+        android:text="@string/emaill"
+       />
+<TextView
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+         android:layout_marginLeft="10dp"
+          android:gravity="center"
+        android:text="" 
+         />
+</TableRow>
+<TableRow 
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_marginTop="2dp"
+    android:background="#FFFFFF"
+    android:layout_weight="1">
+<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"
+        android:text="@string/id_name" />
+<TextView
+        android:id="@+id/id_name"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+         android:gravity="center"
+        android:text="" />
+</TableRow>
+<TableRow 
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_marginTop="2dp"
+    android:background="#FFFFFF"
+    android:layout_weight="1">
+<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"
+        android:text="@string/cell_phone_number" />
+<TextView
+        android:id="@+id/cell_phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+         android:gravity="center"
+        android:layout_marginLeft="10dp"
+        android:text="" />
+</TableRow>
+<TableRow 
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_marginTop="2dp"
+    android:background="#FFFFFF"
+    android:layout_weight="1">
+<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"
+        android:text="@string/log_in_password" />
+<TextView
+        android:id="@+id/log_in_password"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+         android:gravity="center"
+        android:layout_marginLeft="10dp"
+        android:text="" />
+</TableRow>
+<TableRow 
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_marginTop="2dp"
+    android:background="#FFFFFF"
+    android:layout_weight="1">
+<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"
+        android:text="@string/sex" />
+<TextView
+        android:id="@+id/sex"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+         android:gravity="center"
+        android:text="" />
+</TableRow>
+<TableRow 
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_marginTop="2dp"
+    android:background="#FFFFFF"
+    android:layout_weight="1">
+<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"
+        android:text="@string/birth_date" />
+<TextView
+        android:id="@+id/birth_date"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+         android:gravity="center"
+        android:layout_marginLeft="10dp"
+        android:text="" />
+</TableRow>
+<TableRow 
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_marginTop="2dp"
+    android:background="#FFFFFF"
+    android:layout_weight="1"
+    android:layout_marginBottom="5dp">
+<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"
+        android:text="@string/city" />
+<TextView
+        android:id="@+id/city"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+         android:gravity="center"
+        android:text="" />
+</TableRow>
+ <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            />
+            
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+    <Button
+        android:id="@+id/log_out"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/log_out" 
+        android:background="@drawable/shape"
+        android:textSize="15dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+      />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:uview="http://schemas.android.com/apk/res-auto" 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+ 
+    <com.mycustom.view.TitleView
+         android:layout_width="match_parent"  
+         android:layout_height="50dp"
+         android:id="@+id/mytitleview"
+         uview:titleText="@string/homeTitle"
+         uview:leftIcon="@drawable/ic_launcher"
+         uview:rightIcon="@drawable/ic_launcher"
+         uview:leftIconVisible="visible"
+         uview:rightIconVisible="visible"
+         uview:viewBgColor="@color/home_title" />
+    
+    <ImageView 
+        android:id="@+id/fruit"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"/>
+    <TextView 
+        android:id="@+id/fruit_information"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:text=""/>
+       <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            />
+            
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+    <Button
+        android:id="@+id/train"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/train" 
+        android:background="@drawable/shape"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+      />
+    </LinearLayout>
+</LinearLayout>

@@ -17,6 +17,62 @@
     
     <string name="startBtn">点击这里开始</string>
     
+    
+    <string name="personalcenter">个人中心</string>
+    <string name="attentionmy">关注我的人</string>
+    <string name="integral">积分：</string>
+    <string name="gift">礼物：</string>
+    <string name="interaction">互动：</string>
+    <string name="attentionone">我关注的人</string>
+    <string name="attentiontwo">关注我的人</string>
+    <string name="attentionapplyfor">关注人申请</string>
+    <string name="mycollect">我的收藏</string>
+    <string name="mycallingcard">我的名片</string>
+     <string name="relation_we">联系我们</string>
+    <string name="advertisement_cooperation">广告合作</string>
+    <string name="interactionsay">互动交流</string>
+    <string name="sweep">扫一扫二维码，关注我吧</string>
+    <string name="additioninformation">附加信息</string>
+    <string name="ID">账号</string>
+    <string name="train_plan">允许查看我的训练计划</string>
+    <string name="mental">允许查看我的脑力报告</string>
+    <string name="cancel">拒绝</string>
+    <string name="train">我要继续训练</string>
+    <string name="agree">同意</string>
+    <string name="market_cooperation">市场合作</string>
+    <string name="emaill">邮箱地址</string>
+    <string name="id_name">显示名称*</string>
+    <string name="cell_phone_number">手机号</string>
+    <string name="log_in_password">登录密码</string>
+    <string name="sex">性别*</string>
+    <string name="birth_date">出生年度*</string>
+    <string name="city">所在城市*</string>
+    <string name="log_out">退出登录</string>
+    <string name="clean_room">清理空间</string>
+    <string name="cancel_attention">取消关注</string>
+    <string name="send">发送</string>
+    <string name="content_cooperation">内容合作</string>
+     <string name="relation_official_website">官网：</string>
+     <string name="relation_Twitter">微博：</string>
+     <string name="relation_Wechat">微信：</string>
+    <string name="relation_phone">电话：</string>
+    <string name="relation_email">邮箱：</string>
+    <string name="market_phone">联系电话：</string>
+    <string name="market_email">电子邮箱：</string>
+    <string name="advertisement_phone">联系电话：</string>
+    <string name="advertisement_email">电子邮箱：</string>
+    <string name="content_phone">联系电话：</string>
+    <string name="content_email">电子邮箱：</string>
+     <string name="gift_box">我的礼物箱</string>
+     <string name="gift_information">礼物信息</string>
+     <string name="txt_treaty">使用协议与隐私条款</string>
+     <string name="set_remark">请输入备注名</string>
+     <string name="save">保存</string>
+     <string name="attentionmy_detail">关注人明细</string>
+     <string name="idea">发表反馈意见</string>
+     <string name="idea_txt">请在此处输入你的反馈意见，我们会在参与反馈意见者抽出10名，并发与纪念奖</string>
+     <string name="about">关于我们</string>
+    
     <string-array name="homeMenu">
         <item>首页</item>
         <item>账户设置</item>
