@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/background"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/t1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="综合得分" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <ProgressBar
+                android:id="@+id/pros1"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"              
+                android:max="1000"
+                android:progressDrawable="@drawable/bar" />
+
+            <TextView
+                android:id="@+id/shuzi1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" 
+                android:text="TextView" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/t2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="速度" />
+
+             <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <ProgressBar
+                android:id="@+id/pros2"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"              
+                android:max="1000"
+                android:progressDrawable="@drawable/bar" />
+
+            <TextView
+                android:id="@+id/shuzi2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" 
+                android:text="TextView" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/t3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="记忆力" />
+
+            <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <ProgressBar
+                android:id="@+id/pros3"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"              
+                android:max="1000"
+                android:progressDrawable="@drawable/bar" />
+
+            <TextView
+                android:id="@+id/shuzi3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" 
+                android:text="TextView" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/t4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="注意力" />
+
+            <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <ProgressBar
+                android:id="@+id/pros4"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"              
+                android:max="1000"
+                android:progressDrawable="@drawable/bar" />
+
+            <TextView
+                android:id="@+id/shuzi4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" 
+                android:text="TextView" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/t5"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="灵活性" />
+
+           <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <ProgressBar
+                android:id="@+id/pros5"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"              
+                android:max="1000"
+                android:progressDrawable="@drawable/bar" />
+
+            <TextView
+                android:id="@+id/shuzi5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" 
+                android:text="TextView" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/t6"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="解决问题能力" />
+
+            <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <ProgressBar
+                android:id="@+id/pros6"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"              
+                android:max="1000"
+                android:progressDrawable="@drawable/bar" />
+
+            <TextView
+                android:id="@+id/shuzi6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" 
+                android:text="TextView" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+       <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:layout_weight="1">
+
+    </LinearLayout>
+        
+        </LinearLayout>
+
+

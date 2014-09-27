@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:uview="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background" >
+    <com.mycustom.view.TitleView
+         android:layout_width="match_parent"  
+         android:layout_height="50dp"
+         android:id="@+id/mytitleview"
+         uview:titleText="@string/plan"
+         uview:leftIcon="@drawable/ic_launcher"
+         uview:leftIconVisible="visible"
+         uview:viewBgColor="@color/home_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1" >
+
+        <ImageView
+            android:id="@+id/head"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="2"
+            android:src="@drawable/ic_launcher" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" 
+            android:gravity="center_vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="TextView" />
+
+          
+
+                <TextView
+                    android:id="@+id/accdata"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="TextView" />
+
+  
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="TextView" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_weight="3" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" 
+            android:gravity="center_vertical"
+            android:background="@color/black"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@color/white"
+                android:layout_margin="1dp"
+                android:layout_weight="1" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@color/white"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:text="完成天数" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@color/white"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:text="未完成天数" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@color/white"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:text="完成比例" />
+         
+            </LinearLayout>
+             <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" 
+            android:gravity="center_vertical"
+            android:background="@color/black"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@color/white"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:text="本周" />
+            <TextView
+                android:id="@+id/accday1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@color/white"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:text="TextView" />
+            <TextView
+                android:id="@+id/unday1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@color/white"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:text="TextView" />
+            <TextView
+                android:id="@+id/ratio1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@color/white"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:text="TextView" />
+         
+            </LinearLayout><LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" 
+            android:gravity="center_vertical"
+            android:background="@color/black"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@color/white"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:text="本月" />
+            <TextView
+                android:id="@+id/accday2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@color/white"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:text="TextView" />
+            <TextView
+                android:id="@+id/unday2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@color/white"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:text="TextView" />
+            <TextView
+                android:id="@+id/ratio2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@color/white"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:text="TextView" />
+         
+            </LinearLayout><LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" 
+            android:gravity="center_vertical"
+            android:background="@color/black"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@color/white"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:text="本季" />
+            <TextView
+                android:id="@+id/accday3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@color/white"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:text="TextView" />
+            <TextView
+                android:id="@+id/unday3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@color/white"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:text="TextView" />
+            <TextView
+                android:id="@+id/ratio3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@color/white"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:text="TextView" />
+         
+            </LinearLayout><LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" 
+            android:gravity="center_vertical"
+            android:background="@color/black"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@color/white"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:text="本年" />
+            <TextView
+                android:id="@+id/accday4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@color/white"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:text="TextView" />
+            <TextView
+                android:id="@+id/unday4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@color/white"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:text="TextView" />
+            <TextView
+                android:id="@+id/ratio4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@color/white"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:text="TextView" />
+         
+            </LinearLayout>
+        
+    </LinearLayout>
+
+</LinearLayout>

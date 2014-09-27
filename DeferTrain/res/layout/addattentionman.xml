@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:uview="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/background">
+    
+    
+   
+     <com.mycustom.view.TitleView
+         android:layout_width="match_parent"  
+         android:layout_height="50dp"
+         android:id="@+id/mytitleview"
+         uview:titleText="@string/addman"
+         uview:leftIcon="@drawable/restart"
+         uview:rightIcon="@drawable/add"
+         uview:leftIconVisible="visible"
+         uview:rightIconVisible="visible"
+         uview:viewBgColor="@color/home_title" />
+    
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="@string/addman" />
+
+    <EditText
+        android:id="@+id/add"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/biankuan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10" 
+        android:textSize="25dp">
+
+        <requestFocus />
+    </EditText>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:id="@+id/sweep"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+        android:gravity="center_vertical"
+        android:background="@drawable/biankuan">
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/untitled" 
+            android:focusable="false"/>
+
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="扫一扫二维码，关注我吧     >"
+            android:textSize="20dp" 
+            android:focusable="false"
+            />
+
+
+    </LinearLayout>
+
+</LinearLayout>

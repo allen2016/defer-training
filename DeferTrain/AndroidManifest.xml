@@ -255,6 +255,94 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        
+                  <!-- 我关注的人-->
+         <activity 
+             android:name="com.neusoft.activities.MyAttentionpAty">
+            <intent-filter>
+                <action android:name="android.intent.action.MYATT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>     
+         </activity>
+        <!-- 被关注人明细-->
+        <activity android:name="com.neusoft.activities.AttentionManDataAty">
+            <intent-filter>
+                <action android:name="android.intent.action.ATTENT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter> 
+        </activity>
+        <!-- 设置备注名-->
+        <activity android:name="com.neusoft.activities.SetremarknameAty">
+            <intent-filter>
+                <action android:name="android.intent.action.SETRE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter> 
+        </activity>
+        <!-- 添加我关注的人-->
+        <activity android:name="com.neusoft.activities.AddAttentionManAty">
+            <intent-filter>
+                <action android:name="android.intent.action.ADDATTEN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter> 
+        </activity>
+        <!-- 输入验证信息-->
+        <activity android:name="com.neusoft.activities.InputCheckMessageAty">
+            <intent-filter>
+                <action android:name="android.intent.action.INPUTC"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter> 
+        </activity>
+        <!-- 添加关注人确认-->
+        <activity android:name="com.neusoft.activities.InputMessageConfirmAty">
+             <intent-filter>
+                <action android:name="android.intent.action.INPUTM"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>     
+        </activity>
+        <!-- 被查找人个人资料-->
+        <activity android:name="com.neusoft.activities.PersonalDataAty">
+            <intent-filter>
+                <action android:name="android.intent.action.PERSONAL"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter> 
+        </activity>
+        <!-- 计划完成情况-->
+         <activity android:name="com.neusoft.activities.PlanAccomplishCaseAty">
+             <intent-filter>
+                <action android:name="android.intent.action.PLANA"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter> 
+         </activity>
+         <!-- 本周训练计划-->
+          <activity android:name="com.neusoft.activities.WeekTrainingPlanAty">
+              <intent-filter>
+                <action android:name="android.intent.action.WEEKT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter> 
+          </activity>
+          
+          <!-- 脑力报告-->
+          <activity android:name="com.neusoft.activities.BrainsReportAty">
+              <intent-filter>
+                <action android:name="android.intent.action.BRAINS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter> 
+          </activity>
+          <!-- 曲线图-->
+           <activity android:name="com.neusoft.activities.GraphAty">
+              <intent-filter>
+                <action android:name="android.intent.action.Graph"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter> 
+          </activity>
+           <!-- 训练建议-->
+           <activity android:name="com.neusoft.activities.TrainingAdviceAty">
+              <intent-filter>
+                <action android:name="android.intent.action.Training"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter> 
+          </activity>
+        
     </application>
 
 </manifest>

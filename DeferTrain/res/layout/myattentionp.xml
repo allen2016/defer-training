@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:uview="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+   <com.mycustom.view.TitleView
+         android:layout_width="match_parent"  
+         android:layout_height="50dp"
+         android:id="@+id/mytitleview"
+         uview:titleText="@string/guanzhuren"
+         uview:leftIcon="@drawable/home"
+         uview:rightIcon="@drawable/add"
+         uview:leftIconVisible="visible"
+         uview:rightIconVisible="visible"
+         uview:viewBgColor="@color/home_title" />
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:divider="@color/white"
+        android:focusable="false"
+        android:background="@color/background"
+        android:dividerHeight="3px">
+    </ListView>
+
+</LinearLayout>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:uview="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical" >
+      <com.mycustom.view.TitleView
+         android:layout_width="match_parent"  
+         android:layout_height="50dp"
+         android:id="@+id/mytitleview"
+         uview:titleText="@string/s2"
+         uview:leftIcon="@drawable/restart"
+         uview:rightIcon="@drawable/setting2"
+         uview:leftIconVisible="visible"
+         uview:rightIconVisible="visible"
+         uview:viewBgColor="@color/home_title" />
+<LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical" 
+           android:layout_marginTop="10dp">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="fill_parent"
+               android:layout_weight="3"
+               android:orientation="horizontal" >
+
+               <LinearLayout
+                   android:layout_width="fill_parent"
+                   android:layout_height="match_parent"
+                   android:layout_weight="3"
+                   android:orientation="vertical" >
+
+                   <ImageView
+                       android:id="@+id/head"
+                       android:layout_width="fill_parent"
+                       android:layout_height="fill_parent"
+                       android:layout_margin="5dp"
+                       android:src="@drawable/ic_launcher" />
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="fill_parent"
+                   android:layout_height="match_parent"
+                   android:layout_weight="2"
+                   android:orientation="vertical"
+                   android:gravity="center" >
+                   <TextView
+                       android:id="@+id/name"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_margin="3dp"
+                       android:gravity="center"
+                       android:text="TextView" 
+                       android:textSize="@dimen/ziti"/>
+
+                   <TextView
+                       android:id="@+id/sex"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_margin="3dp"
+                       android:gravity="center"
+                       android:text="TextView" 
+                       android:textSize="@dimen/ziti"/>
+                    <TextView
+                       android:id="@+id/age"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_margin="3dp"
+                       android:text="TextView" 
+                       android:gravity="center"
+                       android:textSize="@dimen/ziti"/>
+                     <TextView
+                       android:id="@+id/address"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_margin="3dp"
+                       android:gravity="center"
+                       android:text="TextView" 
+                       android:textSize="@dimen/ziti"/>
+                  
+               </LinearLayout>
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="fill_parent"
+               android:layout_weight="2"
+               android:orientation="vertical" >
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content" 
+                   android:orientation="horizontal"
+                   android:layout_marginTop="3dp"
+                   android:layout_marginBottom="3dp">
+
+                   <TextView
+                       android:layout_width="fill_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="3"
+                       android:gravity="center"
+                       android:text="@string/f1" 
+                       android:textSize="@dimen/ziti"/>
+                    <TextView
+                       android:id="@+id/message1"
+                       android:layout_width="fill_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="2"
+                       android:gravity="center"
+                       android:text="TextView" 
+                       android:textSize="@dimen/ziti"/>
+              </LinearLayout>
+              <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content" 
+                   android:orientation="horizontal"
+                   android:layout_marginTop="3dp"
+                   android:layout_marginBottom="3dp">
+
+                   <TextView
+                       android:layout_width="fill_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="3"
+                       android:gravity="center"
+                       android:text="@string/remark" 
+                       android:textSize="@dimen/ziti"/>
+                    <EditText
+                       android:id="@+id/setname1"
+                       android:layout_width="fill_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="2"
+                       android:gravity="center"
+                       android:background="@drawable/biankuan"
+                       android:textSize="@dimen/ziti"/>
+              </LinearLayout>
+
+           
+              
+            </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

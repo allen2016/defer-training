@@ -12,6 +12,24 @@
 	
 	<color name="personalcenter_txt">#FFFFFF</color>
 
+	<color name="blue">#07b2aa</color>
+    <color name="background">#efefef</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="emeraldgreen">#10aa9e</color>
+    
+    <color name="green1">#a5ebe9</color>
+    <color name="green2">#07b2aa</color>
+     
+    <color name="ri">#434343</color>
+    <color name="zi">#c5c5c5</color>
+
+	<color name="wizard_bg">#0097d0</color>
+	
+	<color name="red1">#fe0101</color>
+	<color name="red2">#c23434</color>
+	
+	<color name="huise">#b2b1b6</color>
 </resources>
 
 

@@ -86,4 +86,38 @@
     <string name="readFileErr">读取二维码图片失败</string>
     <string name="QRScanTitle">扫一扫</string>
     
+     <string name="guanzhuren">我关注的人</string>
+    <string name="hudong">互动交流</string>
+    <string name="xunlian">本周训练</string>
+    <string name="jihua">计划完成</string>
+    <string name="naoli">脑力情况</string>
+    
+    <string name="setremarkname">设置备注名</string>
+    <string name="mingxi">关注人明细</string>
+    
+    <string name="saccount">账号</string>
+    <string name="zuijinxunlian">最近训练</string>
+    
+     <string name="back">返回</string>
+    <string name="remark">备注名：</string>
+    
+    <string name="addman">添加我关注的人</string>
+    <string name="sweep">扫一扫</string>
+    <string name="personal">个人资料</string>
+    
+     <string name="addfriend">加为好友</string>
+     <string name="s">输入验证信息</string>
+      <string name="s1">对方需要你填写验证信息</string>
+      <string name="next">下一步</string>
+      
+       <string name="s2">添加关注人确认</string>
+       <string name="f1">附加信息</string>
+       
+       <string name="plan">计划完成情况</string>
+       <string name="weekplan">本周训练计划</string>
+       <string name="brains">脑力情况</string>
+        <string name="zhibiao">指标发展趋势</string>
+        
+        <string name="jianyi">训练建议</string>
+    
 </resources>
